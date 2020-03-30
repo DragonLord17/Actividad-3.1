@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Actividad 3.1</title>
+</head>
+<body>
+   
+    <main>
+    <h1>Actividad 3.1</h1>
+    
+    <table id="tabla1" border="1" align="center">
+        <tr>
+            <td>Alert</td>
+            <td><button type="button" onclick="funcionAlert()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>Mensaje</td>
+            <td><button type="button" onclick="funcionMensaje()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>ArregloSimple</td>
+            <td><button type="button" onclick="funcionArregloSimple()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>Operadores</td>
+            <td><button type="button" onclick="funcionOperadores()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>EstructurasControl</td>
+            <td><button type="button" onclick="funcionEstructurasControl()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>EntradaDatosCadenas</td>
+            <td><button type="button" onclick="funcionEntradaDatosCadenas()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>Factorial</td>
+            <td><button type="button" onclick="funcionFactorial()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>FuncionesBasicas</td>
+            <td><button type="button" onclick="funcionFuncionesBasicas()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>Cadenas</td>
+            <td><button type="button" onclick="funcionCadenas()">Presionar</button></td>
+        </tr>
+        <tr>
+            <td>CadenasPalindromo</td>
+            <td><button type="button" onclick="funcionCadenasPalindromo()">Presionar</button></td>
+        </tr>
+    </table>
+    
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <hr>
+    <div>
+        <h1>Factorial</h1>
+        <h2 id="factorial"></h2>
+    </div>
+    
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+    
+    <hr>
+    <div>
+        <h1>CadenasPalindromo</h1>
+        <h2 id="palindromo"></h2>
+        <h2 id="nopalindromo"></h2>
+    </div>
+    
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+    <hr>
+    <div>
+    <h1>CadenasPatronesValida2RFC</h1>
+    <form id="f">
+		RFC <input type="text" name="txtRFC" maxlength="13" size="15"/>
+		<br/>
+		<input type="submit" onClick="return valida(txtRFC);" value="Ok"/>
+	</form>
+	<h2 id="rfc"></h2>
+  </div>
+  
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+  
+  <hr>
+  <div>
+  <h1>Basico DOM</h1>
+  
+  <div id="informacion" style="border:thin solid silver; padding:.5em"></div> <!--Para acceder desde JavaScript-->
+
+<h3>Primer p&aacute;rrafo</h3>
+<p>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing elit</a>.
+  Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi.
+  <a href="http://prueba2">Fusce porta</a>. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna.
+  Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.
+</p>
+
+<h3>Segundo p&aacute;rrafo</h3>
+<p>Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin consequat auctor diam.
+  <a href="http://prueba">Ut bibendum blandit est</a>. Curabitur vestibulum. Nunc malesuada porttitor sapien. Aenean a lacus et metus venenatis porta. Suspendisse cursus,
+  sem non dapibus tincidunt, lorem magna porttitor felis, id sodales dolor dolor sed urna. Sed rutrum nulla vitae tellus. Sed quis eros nec lectus tempor lacinia. Aliquam
+  nec lectus nec neque aliquet dictum. Etiam <a href="http://prueba3">consequat sem quis massa</a>. Donec aliquam euismod diam. In magna massa, mattis id, pellentesque sit
+  amet, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce condimentum, arcu in scelerisque lobortis, ante arcu scelerisque mi, at cursus mi risus sed tellus.
+</p>
+
+<h3>Tercer p&aacute;rrafo</h3>
+<p>Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat massa, at sollicitudin justo tellus vitae justo. Vestibulum aliquet, nulla sit amet imperdiet suscipit,
+  nunc erat laoreet est, a <a href="http://prueba">aliquam leo odio sed sem</a>. Quisque eget eros vehicula diam euismod tristique. Ut dui. Donec in metus sed risus laoreet
+  sollicitudin. Proin et nisi non arcu sodales hendrerit. In sem. Cras id augue eu lorem dictum interdum. Donec pretium. Proin <a href="http://prueba4">egestas</a> adipiscing
+  ligula. Duis iaculis laoreet turpis. Mauris mollis est sit amet diam. Curabitur hendrerit, eros quis malesuada tristique, ipsum odio euismod tortor, a vestibulum nisl mi at odio.
+  <a href="http://prueba5">Sed non lectus non est pellentesque</a> auctor.
+</p>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+ <div>
+ <h1>BasicoDOMOVisualiza</h1>
+  <p class="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+  <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+    Donec lacus neque, vehicula in, eleifend vitae, venenatis ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.
+  </span>
+</p>
+<a id="enlace" href="#" onclick="muestra()">Seguir leyendo</a><br>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+<div>
+    <h1>MuestraOculta</h1>
+    <p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+	<a id="enlace_1" href="#" onclick="muestraOculta('1'); return false;">Ocultar contenidos</a>
+
+	<br/>
+
+	<p id="contenidos_2">[2] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+	<a id="enlace_2" href="#" onclick="muestraOculta('2'); return false;">Ocultar contenidos</a>
+
+	<br/>
+	<p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+	<a id="enlace_3" href="#" onclick="muestraOculta('3'); return false;">Ocultar contenidos</a>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<div>
+   <h1>AnadeElimina</h1>
+    <form>
+		<table id="tblUno" align="center">
+			<tr>
+				<th>Columna 1</th>
+				<th>Columna 2</th>
+			</tr>
+		</table>
+		<input type="button" value="Agregar" onclick = "agregaLinea();"/>
+		<br/>
+		<input type="button" value="Eliminar" onclick = "eliminaLinea();"/>
+	</form>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<div>
+    <h1>AnadeTexto</h1>
+    
+<ul id="lista">
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+  <li>Elemento 3</li>
+</ul>
+<input type="button" value="Añadir elemento" onclick="anade();">
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<div>
+    <h1>MultiplicarCalificaColor</h1>
+    <form>
+			Selecciona que n&uacute;mero de tabla
+			<select name="opTabla" id="opTabla">
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+			</select>
+
+			<p><input type="button" value="Ejecutar"
+						onclick="muestra(opTabla.value, tabla, document.getElementById('contenido'));"/>
+						<br/>
+			</p>
+
+			<div id="contenido" style="visibility:hidden">
+				<table id="tabla" border="2" align="center">
+					<thead>
+						<th>Operaci&oacute;n</th>
+						<th>Resultado</th>
+						<th>Calificacion</th>
+					</thead>
+				</table>
+				<br>
+				<input type="button" value="Calificar Examen" onclick="califica(opTabla.value, tabla);"/>
+				<br><br>
+				<label id="calf" for=""> Calificacion: </label>
+			</div>
+		</form>
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<hr>
+
+<div>
+    <h1>Fecha-Signo</h1>
+     <p>Ingrese su fecha:</p>
+    <form class="" >
+      <input type="date" name="txtFec" maxlength="10" size="12"/>
+      <input type="button" onClick="validaFechaMenor(txtFec);" value="Ok"/>
+    </form>
+
+</div>
+</main>
+
+
+<footer>
+    <p>Todos los Derechos Reservado &copy;</p>
+</footer>
+    
+</body>
+<script src="js/script.js"></script>
+</html>
